@@ -1,0 +1,37 @@
+[gd_scene load_steps=3 format=3 uid="uid://d116d2shu56o4"]
+
+[ext_resource type="FontFile" uid="uid://by2pi50ley553" path="res://fonts/Px437_IBM_BIOS.ttf" id="1_mwwe0"]
+[ext_resource type="AudioStream" uid="uid://ofmmaf8k6u43" path="res://audio/loop.wav" id="2_j2vat"]
+
+[node name="Label" type="Label"]
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_colors/font_color = Color(0.964706, 0.839216, 0.741176, 1)
+theme_override_fonts/font = ExtResource("1_mwwe0")
+theme_override_font_sizes/font_size = 5
+text = "You have won. Your journey is over.
+Are you satisfied?
+Those tokens are meaningless.
+Why even bother with them?
+They didn't help you.
+They were a hinderence to your success.
+But what do you have to do now other than walk off, 
+because you're free now.
+You're no longer bound by these constraining walls.
+So why not seek out into the eternal abyss?
+There's nothing to do anymore, it's over!
+Go do something else and quit already.
+Maybe that's not what it was about to you,
+maybe you thirsted for the thrill of the ride, 
+and the fun memories you had?
+Maybe it wasn't fun, but at least it was note-worthy!
+I feel as if you aren't done, I guess there is more to do.
+You know what? Go on, restart the game. Find your own fun.
+I am not going to stop you. Enjoy your time here to the fullest.
+Have fun with whatever you're gonna do.
+ 
+:-)"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_j2vat")
+autoplay = true

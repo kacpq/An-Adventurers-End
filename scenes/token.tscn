@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://dqkvxn6fxmu3r"]
+
+[ext_resource type="Script" path="res://scripts/token.gd" id="1_42rfe"]
+[ext_resource type="AudioStream" uid="uid://qb2br6pkhwpv" path="res://audio/token.wav" id="2_02cte"]
+[ext_resource type="Texture2D" uid="uid://bvg5diyp6vlmf" path="res://sprites/money token.png" id="2_pjh6a"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sursp"]
+size = Vector2(16, 16)
+
+[node name="Token" type="Area2D"]
+script = ExtResource("1_42rfe")
+
+[node name="Collision" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_sursp")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_pjh6a")
+
+[node name="TokenSfx" type="AudioStreamPlayer2D" parent="." groups=["audio"]]
+stream = ExtResource("2_02cte")
+bus = &"sfx"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
